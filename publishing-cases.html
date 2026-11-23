@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한소희 | 퍼블리싱 업무 방식</title>
+    <link rel="stylesheet" href="./css/basic/reset.css" />
+    <link rel="stylesheet" href="./css/basic/font.css" />
+    <link rel="stylesheet" href="./css/basic/typography.css" />
+    <link rel="stylesheet" href="./css/basic/common.css" />
+    <link rel="stylesheet" href="./css/components/site-nav.css" />
+    <link rel="stylesheet" href="./css/pages/project-detail.css" />
+    <link rel="stylesheet" href="./css/pages/project-detail-media.css" />
+    <link rel="stylesheet" href="./css/pages/work-method.css" />
+    <link rel="stylesheet" href="./css/pages/work-method-layout.css" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+  </head>
+  <script defer src="./js/loading.js"></script>
+  <body>
+    <div class="wrap">
+      <div id="loading" class="loading"><div class="spinner"></div></div>
+      <header class="site-header" aria-label="주요 메뉴">
+        <a class="site-header__logo gra-neon fs-15 fw-900" href="./index.html"
+          >&lt; SOHEE /&gt;</a
+        >
+        <button
+          class="site-header__toggle"
+          type="button"
+          aria-label="메뉴 열기"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+          <ul class="site-nav__list">
+            <li>
+              <a class="site-nav__link" href="./index.html#about">ABOUT</a>
+            </li>
+            <li>
+              <a class="site-nav__link" href="./index.html#featured"
+                >FEATURED</a
+              >
+            </li>
+            <li>
+              <a class="site-nav__link" href="./index.html#projects"
+                >PROJECTS</a
+              >
+            </li>
+            <li>
+              <a
+                class="site-nav__link"
+                href="./publishing-cases.html"
+                aria-current="page"
+                >PUBLISHING</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="work-method">
+        <section class="method-hero content">
+          <p class="neon-01 fs-20 fw-700 ff-pre">PUBLISHING WORKFLOW</p>
+          <h1 class="gra-neon fs-50 fw-900">퍼블리싱 업무 방식</h1>
+          <p class="method-hero__intro fs-24 fw-500">
+            프로젝트마다 화면과 요구사항은 다르지만, 구조를 정리하고 수정 내용을
+            전달할 때 아래 기준을 사용했습니다.
+          </p>
+          <nav class="workflow-index" aria-label="퍼블리싱 업무 방식 목차">
+            <a href="#workflow-1"
+              ><span>01</span><strong>시안 분석 및 HTML구조 설계</strong></a
+            >
+            <a href="#workflow-2"
+              ><span>02</span><strong>커스텀UI 설계 방법</strong></a
+            >
+            <a href="#workflow-3"
+              ><span>03</span><strong>JS작성 방법</strong></a
+            >
+            <a href="#workflow-4"><span>04</span><strong>반응형</strong></a>
+            <a href="#workflow-5"
+              ><span>05</span><strong>파일 네이밍</strong></a
+            >
+            <a href="#workflow-6"><span>06</span><strong>SCSS</strong></a>
+            <a href="#workflow-7"
+              ><span>07</span><strong>폴더 세분화</strong></a
+            >
+            <a href="#workflow-8"><span>08</span><strong>협업</strong></a>
+          </nav>
+        </section>
+
+        <article id="workflow-1" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">01</p>
+            <h2 class="fs-40 fw-800">시안 분석 및 HTML구조 설계</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <p>
+              시안을 보고 나눌 수 있을 만큼 그룹화합니다. 함께 움직이는 요소,
+              반복되는 요소, 의미가 다른 요소를 나눈 뒤 그에 맞는 시맨틱 태그와
+              일반 태그를 사용합니다.
+            </p>
+            <ul class="workflow-points">
+              <li>
+                <span>01</span>비슷한 레이아웃을 가진 요소에는 CSS 스타일
+                재사용을 위해 동일한 클래스명을 사용합니다.
+              </li>
+              <li>
+                <span>02</span>가독성·계층 구조·재사용성을 위해 BEM 방식으로
+                클래스명을 작성합니다.
+              </li>
+            </ul>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>
+                  여기에 시안을 그룹화한 방식, HTML 구조, 태그 선택 사례
+                  이미지를 넣으세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="workflow-2" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">02</p>
+            <h2 class="fs-40 fw-800">커스텀UI 설계 방법</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <p>
+              모달, 셀렉트박스처럼 여러 페이지에서 사용될 수 있는 UI는
+              범용적으로 사용할 수 있는 클래스명을 작성합니다. JavaScript 파일은
+              외부 파일로 분리해 여러 페이지에서 사용할 수 있게 구성합니다.
+            </p>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>
+                  여기에 모달·셀렉트박스 등 공통 UI의 마크업 또는 동작 사례
+                  이미지를 넣으세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="workflow-3" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">03</p>
+            <h2 class="fs-40 fw-800">JS작성 방법</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <p>
+              이벤트 바인딩 대상에는 <code>js-</code> 접두사를 사용해 스타일
+              클래스와 구분합니다. JavaScript 파일에서는 기능 로직을 함수로
+              만들고, 이벤트에서는 필요한 함수를 호출하는 방식으로 작성합니다.
+            </p>
+            <ul class="workflow-points">
+              <li>
+                <span>01</span>
+                <p><code>js-</code> 접두사로 이벤트 대상임을 표시합니다.</p>
+              </li>
+              <li>
+                <span>02</span>
+                <p>
+                  Ajax 통신이나 DOM 로드 후 추가되는 인터랙션 요소에는 <br />
+                  <code>$(document).on('click', '.js-button', ...)</code>과 같은
+                  이벤트 위임 방식을 사용합니다.
+                </p>
+              </li>
+              <li>
+                <span>03</span>비슷한 기능끼리 JavaScript 파일을 나눠
+                관리합니다.
+              </li>
+            </ul>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>
+                  여기에 <code>js-</code> 클래스, 이벤트 위임, 함수 분리 사례
+                  이미지를 넣으세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="workflow-4" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">04</p>
+            <h2 class="fs-40 fw-800">반응형</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <p>
+              기본적으로 아래 구간을 기준으로 화면을 확인합니다. 프로젝트마다
+              시안과 콘텐츠에 따라 세부 분기는 달라질 수 있지만, 이 범위를
+              벗어나지 않도록 작업합니다.
+            </p>
+            <ul class="workflow-points">
+              <li><span>01</span>노트북 · 태블릿 가로: 1280px ~ 1024px</li>
+              <li><span>02</span>태블릿 가로: 1023px ~ 768px</li>
+              <li><span>03</span>태블릿 세로 · 모바일 가로: 767px ~ 480px</li>
+              <li><span>04</span>모바일 세로: 479px 이하</li>
+            </ul>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>여기에 PC·태블릿·모바일 반응형 비교 이미지를 넣으세요.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="workflow-5" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">05</p>
+            <h2 class="fs-40 fw-800">파일 네이밍</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <ul class="workflow-points">
+              <li>
+                <span>01</span>
+                <p>
+                  여러 페이지에서 사용하는 스타일은 <code>common.css</code>처럼
+                  공통 목적이 보이는 파일명으로 관리합니다.
+                </p>
+              </li>
+              <li>
+                <span>02</span>
+                <p>
+                  각 페이지에서만 사용하는 스타일은 <code>main.css</code>처럼
+                  페이지명을 붙여 관리합니다.
+                </p>
+              </li>
+            </ul>
+            <div class="workflow-fill">
+              <span>EDIT NOTE</span>이 부분은 프로젝트에서 사용한 추가 파일
+              네이밍 규칙이 있다면 채워 넣으세요.
+            </div>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>여기에 파일 네이밍 또는 파일 구성 사례 이미지를 넣으세요.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="workflow-6" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">06</p>
+            <h2 class="fs-40 fw-800">SCSS</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <p>
+              BEM 방식으로 클래스명을 작성하기 때문에, SCSS에서는 부모 요소 아래
+              자식 요소의 스타일을 작성할 때 <code>&amp;</code>를 사용합니다.
+              반복해서 전체 클래스명을 쓰는 시간을 줄이고, 코드의 계층 구조를
+              확인하기 쉽게 합니다.
+            </p>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>
+                  여기에 BEM과 <code>&amp;</code>를 사용한 SCSS 작성 사례
+                  이미지를 넣으세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="workflow-7" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">07</p>
+            <h2 class="fs-40 fw-800">폴더 세분화</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <p>
+              기존에는 SCSS 또는 CSS 폴더에 기본 스타일과 페이지별 스타일을 함께
+              작업했습니다. 파일이 많아진 뒤에는 역할에 맞게 <code>base</code>,
+              <code>components</code>, <code>pages</code> 폴더로 나누어
+              관리했습니다.
+            </p>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>
+                  여기에 폴더 구조를 변경한 전후 또는 현재 폴더 구조 이미지를
+                  넣으세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="workflow-8" class="workflow-item content">
+          <header class="workflow-item__header">
+            <p class="fs-20 fw-700 ff-pre">08</p>
+            <h2 class="fs-40 fw-800">협업</h2>
+          </header>
+          <div class="workflow-answer fs-20 fw-500">
+            <p>
+              순수 퍼블리싱과 기본 인터랙션 작업 후 Java 웹개발자에게 파일을
+              전달하는 방식으로 협업했습니다. 시안에서 구현 방법을 확인해야 하는
+              부분은 필요한 UI와 동작을 확인한 뒤 수정 범위와 적용 방식을
+              조율했습니다.
+            </p>
+            <ul class="workflow-points">
+              <li>
+                <span>01</span>기존 파일에서 코드가 추가·변경되면 HTML·SCSS·CSS
+                파일 안에 수정 날짜 주석을 남깁니다.
+              </li>
+              <li>
+                <span>02</span>수정 사항이 많은 경우에는 파일 전체를 전달하고
+                덮어쓰기 요청을 함께 남깁니다.
+              </li>
+              <li>
+                <span>03</span>
+                <p>
+                  파일을 전달할 때는 변경된 파일명(<code>index.html</code>,
+                  <code>index.css</code>)을 나열하고, 필요한 수정 내용은
+                  메신저로 함께 전달합니다.
+                </p>
+              </li>
+            </ul>
+            <div class="workflow-images">
+              <div class="workflow-placeholder">
+                <span>IMAGE SPACE</span>
+                <p>
+                  여기에 수정 주석, 변경 파일 목록, 전달 메시지 사례 이미지를
+                  넣으세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <section class="method-end content">
+          <p class="fs-24 fw-500">
+            각 프로젝트의 실제 사례는 대표 프로젝트 상세 페이지에서 확인할 수
+            있습니다.
+          </p>
+          <a class="fs-24 fw-700" href="./project-id.html"
+            >대표 프로젝트 상세 보기 →</a
+          >
+        </section>
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

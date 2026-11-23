@@ -1,0 +1,54 @@
+.img-zoomIn {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.modal-overlay--image {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-overlay--image .modal {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.modal-overlay--image .modal__img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.modal-overlay--image .modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px 16px;
+  color: var(--dark-01);
+  font-weight: 700;
+  background-color: var(--white-01);
+  cursor: pointer;
+}
+
+@media all and (max-width: 768px) {
+  .modal-overlay--image {
+    padding: 15px;
+  }
+  .modal-overlay--image .modal__close {
+    top: 10px;
+    right: 10px;
+  }
+}/*# sourceMappingURL=modal.css.map */

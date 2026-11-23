@@ -1,0 +1,16 @@
+.template-project-next a {
+  color: var(--white-01);
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.template-project-next a span {
+  color: inherit;
+}
+
+.template-project-next a:hover,
+.template-project-next a:focus-visible {
+  color: var(--dark-01);
+  background: var(--neon-01);
+}/*# sourceMappingURL=project-template-fixes.css.map */

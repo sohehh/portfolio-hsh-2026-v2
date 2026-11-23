@@ -1,0 +1,54 @@
+.img-zoomIn {
+  cursor: zoom-in;
+}
+
+.modal-overlay {
+  &--image {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .modal {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .modal__img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 12px 16px;
+      color: var(--dark-01);
+      font-weight: 700;
+      background-color: var(--white-01);
+      cursor: pointer;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .modal-overlay {
+    &--image {
+      padding: 15px;
+
+      .modal__close {
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
